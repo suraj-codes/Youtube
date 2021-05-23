@@ -11,7 +11,7 @@ const { runCronJobs } = require("./services/cronJobs");
 //Configurations
 const config = require("./config");
 const dbConnect = require("./config/db");
-
+const PORT = process.env.PORT || 5000;
 // routes
 const authRoutes = require("./routes/auth");
 const channelRoutes = require("./routes/channels");
@@ -58,8 +58,8 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.listen(config.PORT, () => {
-  console.log(`Server is running on port ${config.PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
   dbConnect();
   runCronJobs();
 });

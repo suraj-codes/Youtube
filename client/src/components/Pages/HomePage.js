@@ -77,7 +77,7 @@ const HomePage = () => {
                   style={{
                     color: "red",
                   }}
-                  href="https://github.com/smfils1/youtube-clone"
+                  href="https://github.com/suraj-codes/Youtube"
                 >
                   GitHub Repository
                 </a>
